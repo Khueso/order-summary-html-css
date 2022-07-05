@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Order summary card</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    :root {
+      --pale-blue: hsl(225, 53%, 62%);
+      --bright-blue: hsl(245, 75%, 52%);
+      --very-pale-blue: hsl(225, 100%, 98%);
+      --desaturated-blue: hsl(224, 23%, 55%);
+      --dark-blue: hsl(223, 47%, 23%);
+      --font-size-p: 16px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: 'Red Hat Display', sans-serif;
+    }
+
+    body{
+      width: 375px;
+      background-image: url(./images/pattern-background-mobile.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      height: 100vh;
+      display: grid;
+      place-items: center;
+    }
+    .order-summary {
+      width: 420px;
+      height: 600px;
+      display: grid;
+      place-items: center;
+      border-radius: 20px;
+      grid-template-rows: auto 1fr auto;
+      box-shadow: 2px 2px 16px 5px rgba(0, 0, 0, 0.05);
+      background-color: white;
+    }
+
+    figure {
+      width: 100%;
+
+    }
+
+    figure img{
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 20px 20px 0 0;
+    }
+
+    h1 {
+      font-size: 24px;
+      font-weight: 900;
+      margin-bottom: 16px;
+    }
+
+    .content{
+      height: 450px;
+      width: 100%;
+      display: grid;
+     grid-template-rows: 1fr auto 1fr;
+      place-items: center;
+    }
+
+    .content div:nth-child(1),
+    .content div:nth-child(3){
+      display: grid;
+      place-items: center;
+    }
+
+    .text{
+      text-align: center;
+      width: 265px;
+      font-size: var(--font-size-p);
+      font-weight: 500;
+      color: var(--desaturated-blue);
+    }
+    .product {
+      width: 312px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+     padding-top: 16px;
+     padding-bottom: 16px;
+      background-color: var(--very-pale-blue);
+      border-radius: 12px;
+     
+    }
+
+    .product p:nth-child(1) {
+      font-weight: 700;
+      
+    }
+
+    .product p:nth-child(2) {
+      color: var(--desaturated-blue);
+    }
+
+    .product a{
+      font-size: 16px;
+      font-weight: 700;
+
+    }
+
+    .product a:hover{
+      text-decoration: none;
+      color: var(--pale-blue);
+    }
+
+    button{
+      width: 312px;
+      height: 54px;
+      border-radius: 12px;
+      border: none;
+      font-size: 16px;
+      font-weight: 900;
+      color: var(--very-pale-blue);
+      background-color: var(--bright-blue);
+      box-shadow: 2px 2px 8px 6px rgba(47, 36, 78, 0.1);
+      cursor: pointer;
+      margin-bottom: 28px;
+    }
+
+    button:hover {
+      background-color: var(--pale-blue);
+    }
+
+    .cancel-order{
+      text-decoration: none;
+      color: var(--desaturated-blue);
+      font-size: 16px;
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    .cancel-order:hover {
+      color: black;
+    }
+    
+
+    .attribution { font-size: 11px; text-align: center; }
+
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    @media (max-width: 375px){
+      .order-summary{
+        width: 360px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="order-summary">
+    
+    <figure><img src="./images/illustration-hero.svg" alt="Teen dancing"></figure>
+    
+    <div class="content">
+      <div>
+      <h1>Order Summary</h1>
+
+      <p class="text">
+        You can now listen to millions of songs, audiobooks, and podcasts on any 
+        device anywhere you like!
+      </p>  
+    </div>
+      <div class="product">
+        <img src="./images/icon-music.svg" alt="music icon">
+      
+        <div>
+          <p>Annual Plan</p>
+          <p>$59.99/year</p>
+        </div>
+      <a href="">Change</a>
+      </div>  
+      <div>
+
+      <button>
+        Proceed to Payment
+        
+      </button>
+
+      <a href="" class="cancel-order">Cancel Order</a>
+    </div>
+    </div>
+</div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Kristhian Hueso</a>.
+  </div>
+</body>
+</html>
